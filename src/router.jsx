@@ -4,12 +4,12 @@ import Error from "./components/error/Error";
 
 const router = createBrowserRouter([
    {
-      path: "/search/*",
-      element: <App />,
-   },
-   {
       path: "*",
       element: <Error />,
+   },
+   {
+      path: "/search/*",
+      element: <App />,
    },
 ]);
 export default router;
