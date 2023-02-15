@@ -1,14 +1,17 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import Error from "./components/error/Error";
-
+import ErrorPage from "./components/error/Error";
 const router = createBrowserRouter([
    {
-      path: "*",
-      element: <Error />,
+      path: `*`,
+      element: <ErrorPage />,
    },
    {
-      path: "/search/*",
+      path: `/`,
+      element: <App />,
+   },
+   {
+      path: `/search/*`,
       element: <App />,
    },
 ]);
