@@ -19,12 +19,12 @@ function listRepo({ title, description, star, urlRepo }) {
                <h3 className="text-base lg:text-lg font-bold">{title}</h3>
                <p className="text-black text-base">{description}</p>
             </div>
-            <div className="flex md:w-30 w-36 items-start p-2 justify-end ">
+            <div className="flex md:w-30 w-36 items-start p-1 justify-end ">
                <div className="flex justify-end items-center flex-1">
-                  <span className="text-lg font-bold text-slate-600 mr-2 ">
+                  <span className="text-lg font-bold text-black block mr-1 ">
                      {star}
                   </span>
-                  <StarIcon className="text-black w-5 h-5" />
+                  <StarIcon className="text-black w-4 md:w-5 h-4 md:h-5" />
                </div>
             </div>
          </div>

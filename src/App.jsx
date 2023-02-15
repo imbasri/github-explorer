@@ -99,9 +99,9 @@ function App() {
    };
 
    return (
-      <main className="font-sans max-w-[1440px] mx-auto md:bg-slate-100 md:px-10  h-screen break-all ">
-         <section className="container m-auto py-5">
-            <div className="flex flex-col justify-start items-center shadow-sm md:shadow-md pt-5 w-full bg-white h-[92vh] ">
+      <main className="font-sans max-w-[1440px] mx-auto md:bg-slate-100 md:px-10 h-screen break-all ">
+         <section className="container m-auto py-2 md:py-5">
+            <div className="flex flex-col justify-start items-center shadow-sm md:shadow-md  w-full bg-white h-[92vh] ">
                <form action="GET" className=" my-1 w-full p-5 ">
                   <input
                      type="text"
