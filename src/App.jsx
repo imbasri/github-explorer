@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import ListUser from "./components/listUser/ListUser";
 import { ToastContainer, toast } from "react-toastify";
 import Loading from "./components/loading/loading";
+import { useNavigate } from "react-router-dom";
 function App() {
    document.title = "Github Explorer";
    const baseUrl = import.meta.env.VITE_API;
@@ -13,6 +14,7 @@ function App() {
    const [page, setPage] = useState(1);
    const [totalPage, setTotalPage] = useState(1);
    const [loading, setLoading] = useState(false);
+   const navigate = useNavigate();
    const handleSubmit = (e) => {
       e.preventDefault();
       setUserShow(user);
@@ -29,6 +31,7 @@ function App() {
                      ? Math.floor(res.data.total_count / 5)
                      : 1
                );
+               navigate(`/search/users?q=${user}&per_page=5&page=${page}`);
                setData(res.data.items);
                setPage(1);
                setLoading(true);
@@ -49,6 +52,7 @@ function App() {
       setLoading(false);
 
       if (user.length > 0) {
+         navigate(`/search/users?q=${user}&per_page=5&page=${page + 1}`);
          axios
             .get(
                `${baseUrl}/search/users?q=${user}&per_page=5&page=${page + 1}`
@@ -74,6 +78,7 @@ function App() {
       setLoading(false);
 
       if (user !== 0) {
+         navigate(`/search/users?q=${user}&per_page=5&page=${page - 1}`);
          axios
             .get(
                `${baseUrl}/search/users?q=${user}&per_page=5&page=${page - 1}`
