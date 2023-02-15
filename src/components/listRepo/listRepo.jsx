@@ -11,7 +11,7 @@ function listRepo({ title, description, star, urlRepo }) {
    };
    return (
       <section
-         className={`shadow-lg bg-slate-400/80 rounded-sm my-2 w-[98%] break-all  transition-all duration-300 `}
+         className={`shadow-lg bg-slate-400/80 rounded-sm my-2 w-[98%] break-all  transition-all duration-300 hover:ring-2 hover:ring-red-400 `}
          onClick={openRepo}
       >
          <div className="flex w-full px-2 justify-start lg:justify-between">

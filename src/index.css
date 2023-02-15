@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+   .btn-simple {
+      @apply py-2 px-5 lg:px-10 lg:mx-10 bg-sky-300 rounded-full text-base font-bold hover:ring-2 shadow-md transition-all decoration-slate-300 hover:bg-sky-500 hover:ring-indigo-400;
+   }
+}

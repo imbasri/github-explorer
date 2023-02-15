@@ -30,9 +30,9 @@ function ListUser({ name, src, repo }) {
    };
 
    return (
-      <section className="shadow-sm bg-white w-full mx-auto px-5 my-2 cursor-pointer break-all">
+      <section className="shadow-sm bg-white w-full mx-auto px-5 my-2 cursor-pointer break-all ">
          <div
-            className="flex bg-slate-200 rounded-lg justify-between w-full mx-auto p-5 items-center"
+            className="flex bg-slate-200 rounded-lg justify-between w-full mx-auto p-5 items-center hover:ring-2 hover:ring-slate-400 transition-all duration-300"
             onClick={show}
          >
             <div className="flex items-center flex-1">
